@@ -202,10 +202,10 @@ export default function OrderForm({ quantity, setQuantity, color, setColor, form
                 <p className="text-sm font-bold text-royal flex items-center gap-1.5">
                   <Ruler size={16} className="text-gold" /> بدل المقاسات: نفصّلها على قياسك
                 </p>
-                <p className="text-xs text-earth mt-1">شاهدي طريقة أخذ القياس ثم أدخلي طولكِ ووزنكِ بدقة</p>
+                <p className="text-xs text-earth mt-1">أدخلي طولكِ ووزنكِ بدقة لنفصّلها على قياسكِ تماماً</p>
                 <div className="mt-3 mx-auto w-full max-w-[200px]">
                   <InlineVideo src={SIZE_GUIDE_VIDEO.src} poster={SIZE_GUIDE_VIDEO.poster} />
-                  <p className="text-center text-[11px] text-earth mt-1.5">طريقة تحديد المقاس المناسب</p>
+                  <p className="text-center text-[11px] text-earth mt-1.5">شاهدي العباية بالحركة عن قرب</p>
                 </div>
                 <div className="mt-3 grid grid-cols-2 gap-3">
                   <div data-err={!!errors.height}>
