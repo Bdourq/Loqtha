@@ -25,11 +25,11 @@ export const COLORS = [
 ];
 
 export const GALLERY = [
-  { src: "/media/look-black.jpeg", alt: "عباية لقطة كوليكشن - الإطلالة السوداء الملكية" },
   { src: "/media/look-maroon-studio.jpeg", alt: "عباية لقطة كوليكشن - خمري بإطلالة كاملة" },
-  { src: "/media/look-green.jpeg", alt: "عباية لقطة كوليكشن - أخضر زمردي فاخر" },
   { src: "/media/look-maroon-hall.jpeg", alt: "عباية لقطة كوليكشن - خمري بلمسة عصرية" },
   { src: "/media/look-maroon-mirror.jpeg", alt: "عباية لقطة كوليكشن - تفاصيل القصّة الأنيقة" },
+  { src: "/media/look-black.jpeg", alt: "عباية لقطة كوليكشن - الإطلالة السوداء الملكية" },
+  { src: "/media/look-green.jpeg", alt: "عباية لقطة كوليكشن - أخضر زمردي فاخر" },
   { src: "/media/detail-1.jpeg", alt: "تفاصيل الأكمام المروحية والكسرات" },
   { src: "/media/detail-2.jpeg", alt: "قرب الخامة والكسرات المروحية" },
 ];

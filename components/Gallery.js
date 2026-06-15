@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ZoomIn, X, ChevronRight, ChevronLeft } from "lucide-react";
 import { GALLERY } from "../app/data";
@@ -9,6 +9,15 @@ import Reveal from "./Reveal";
 export default function Gallery() {
   const [active, setActive] = useState(0);
   const [open, setOpen] = useState(false);
+
+  // تدوير تلقائي للصور نحو اليمين مع وقفة بين الصورة والأخرى
+  useEffect(() => {
+    if (open) return;
+    const t = setInterval(() => {
+      setActive((a) => (a + 1) % GALLERY.length);
+    }, 3500);
+    return () => clearInterval(t);
+  }, [open, active]);
 
   return (
     <section className="max-w-3xl mx-auto px-4 py-10">
@@ -24,8 +33,8 @@ export default function Gallery() {
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
-              initial={{ opacity: 0, scale: 1.03 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }}
-              transition={{ duration: 0.4 }}
+              initial={{ opacity: 0, x: -60 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 60 }}
+              transition={{ duration: 0.6, ease: "easeInOut" }}
               className="absolute inset-0"
             >
               <Image src={GALLERY[active].src} alt={GALLERY[active].alt} fill className="object-cover" />

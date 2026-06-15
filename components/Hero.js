@@ -54,7 +54,7 @@ export default function Hero({ onOrder }) {
           className="relative mt-7"
         >
           <div className="floaty frame-gold relative mx-auto w-[78%] max-w-sm aspect-[3/4] rounded-[28px] overflow-hidden ring-1 ring-gold/30">
-            <Image src="/media/look-black.jpeg" alt="عباية لقطة كوليكشن الملكية" fill priority className="object-cover" />
+            <Image src="/media/look-maroon-studio.jpeg" alt="عباية لقطة كوليكشن الملكية" fill priority className="object-cover" />
           </div>
           {/* بطاقة السعر العائمة */}
           <motion.div

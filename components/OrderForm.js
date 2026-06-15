@@ -111,7 +111,7 @@ export default function OrderForm({ quantity, setQuantity, color, setColor, form
               <h3 className="font-display text-2xl font-bold mt-3">تم استلام طلبكِ بنجاح </h3>
               <p className="text-cream/85 mt-2 text-sm leading-relaxed">
                 شكراً لثقتكِ بـ <span className="text-goldLight font-bold">لقطة كوليكشن</span>.
-                رح يتواصل معكِ فريقنا هاتفياً خلال وقت قصير لتأكيد التفصيل حسب طولكِ ووزنكِ وموعد التوصيل.
+                راح يوصلكِ طلبكِ خلال يومين إلى ثلاثة أيام، ومندوب التوصيل رح يتواصل معكِ ويأكد الطلب معكِ قبل التسليم.
               </p>
               <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-cream/10 border border-goldLight/30 px-4 py-2 text-goldLight text-sm">
                 <PhoneCall size={16} /> جهّزي هاتفكِ — رح نتصل فيكِ قريباً
@@ -257,7 +257,7 @@ export default function OrderForm({ quantity, setQuantity, color, setColor, form
                 </span>
                 {!submitting && <span className="shimmer absolute inset-0" />}
               </button>
-              <p className="text-center text-earth text-xs">بالضغط على تأكيد الطلب رح يتواصل معكِ فريقنا هاتفياً للتأكيد</p>
+              <p className="text-center text-earth text-xs">بالضغط على تأكيد الطلب راح يوصلكِ طلبكِ خلال يومين إلى ثلاثة أيام ويتواصل معكِ مندوب التوصيل للتأكيد</p>
             </motion.form>
           )}
         </AnimatePresence>
