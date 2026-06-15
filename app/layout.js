@@ -9,6 +9,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl" className={`${tajawal.variable} ${amiri.variable}`}>
       <head>
+        {/* Facebook Domain Verification */}
+        <meta name="facebook-domain-verification" content="25jvrf2d053jsxy9z9mbfxgfdjt21x" />
+        
         {/* Meta Pixel Code */}
         <script
           dangerouslySetInnerHTML={{
