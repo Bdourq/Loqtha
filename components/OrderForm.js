@@ -31,10 +31,21 @@ export default function OrderForm({ quantity, setQuantity, color, setColor, form
 
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
 
+  const normalizePhone = (raw) => {
+    if (!raw) return "";
+    const map = { "\u0660":"0","\u0661":"1","\u0662":"2","\u0663":"3","\u0664":"4","\u0665":"5","\u0666":"6","\u0667":"7","\u0668":"8","\u0669":"9","\u06F0":"0","\u06F1":"1","\u06F2":"2","\u06F3":"3","\u06F4":"4","\u06F5":"5","\u06F6":"6","\u06F7":"7","\u06F8":"8","\u06F9":"9" };
+    let v = String(raw).replace(/[\u0660-\u0669\u06F0-\u06F9]/g, (d) => map[d] || d);
+    v = v.replace(/[^\d]/g, "");
+    if (v.startsWith("00962")) v = v.slice(5);
+    else if (v.startsWith("962")) v = v.slice(3);
+    if (/^7\d{8}$/.test(v)) v = "0" + v;
+    return v;
+  };
+
   const validate = () => {
     const e = {};
     if (!form.name.trim()) e.name = "الاسم مطلوب";
-    if (!/^07\d{8}$/.test(form.phone.replace(/\s/g, ""))) e.phone = "أدخلي رقم أردني صحيح (07XXXXXXXX)";
+    if (!/^07\d{8}$/.test(normalizePhone(form.phone))) e.phone = "أدخلي رقم أردني صحيح (07XXXXXXXX)";
     if (!form.gov) e.gov = "اختاري المحافظة";
     if (!form.address.trim()) e.address = "العنوان التفصيلي مطلوب";
     if (!form.height || +form.height < 130 || +form.height > 200) e.height = "أدخلي الطول بالسم (130-200)";
@@ -52,7 +63,7 @@ export default function OrderForm({ quantity, setQuantity, color, setColor, form
     }
     const payload = {
       name: form.name,
-      phone: form.phone,
+      phone: normalizePhone(form.phone),
       gov: form.gov,
       address: form.address,
       height: form.height,

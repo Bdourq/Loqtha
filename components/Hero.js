@@ -53,8 +53,8 @@ export default function Hero({ onOrder }) {
           initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.35 }}
           className="relative mt-7"
         >
-          <div className="floaty relative mx-auto w-[78%] max-w-sm aspect-[3/4] rounded-[28px] overflow-hidden shadow-soft ring-1 ring-gold/30">
-            <Image src="/media/full-1.jpeg" alt="عباية لقطة كوليكشن الملكية" fill priority className="object-cover" />
+          <div className="floaty frame-gold relative mx-auto w-[78%] max-w-sm aspect-[3/4] rounded-[28px] overflow-hidden ring-1 ring-gold/30">
+            <Image src="/media/look-black.jpeg" alt="عباية لقطة كوليكشن الملكية" fill priority className="object-cover" />
           </div>
           {/* بطاقة السعر العائمة */}
           <motion.div

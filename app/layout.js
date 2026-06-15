@@ -15,12 +15,16 @@ const amiri = Amiri({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://loqtah-collection.vercel.app"),
   title: "عباية لقطة كوليكشن الملكية الفاخرة | تفصيل حسب وزنك وطولك",
   description:
     "عباية لقطة كوليكشن الملكية الفاخرة بقماش كريب بلازما نخب أول. تفصيل دقيق حسب الوزن والطول، توصيل مجاني لكل محافظات الأردن. اطلبي الآن.",
   openGraph: {
+    type: "website",
+    locale: "ar_JO",
     title: "عباية لقطة كوليكشن الملكية الفاخرة",
     description: "تفصيل حسب وزنك وطولك. شال وحزام وتوصيل مجاني. اطلبي الآن.",
+    images: [{ url: "/media/look-maroon-studio.jpeg", width: 912, height: 1120, alt: "عباية لقطة كوليكشن الملكية الفاخرة" }],
   },
 };
 

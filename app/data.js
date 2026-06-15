@@ -25,11 +25,13 @@ export const COLORS = [
 ];
 
 export const GALLERY = [
-  { src: "/media/full-1.jpeg", alt: "عباية لقطة كوليكشن - إطلالة كاملة" },
-  { src: "/media/side-1.jpeg", alt: "عباية لقطة كوليكشن - من الجانب" },
+  { src: "/media/look-black.jpeg", alt: "عباية لقطة كوليكشن - الإطلالة السوداء الملكية" },
+  { src: "/media/look-maroon-studio.jpeg", alt: "عباية لقطة كوليكشن - خمري بإطلالة كاملة" },
+  { src: "/media/look-green.jpeg", alt: "عباية لقطة كوليكشن - أخضر زمردي فاخر" },
+  { src: "/media/look-maroon-hall.jpeg", alt: "عباية لقطة كوليكشن - خمري بلمسة عصرية" },
+  { src: "/media/look-maroon-mirror.jpeg", alt: "عباية لقطة كوليكشن - تفاصيل القصّة الأنيقة" },
   { src: "/media/detail-1.jpeg", alt: "تفاصيل الأكمام المروحية والكسرات" },
   { src: "/media/detail-2.jpeg", alt: "قرب الخامة والكسرات المروحية" },
-  { src: "/media/sleeve-1.jpeg", alt: "تفصيل الكم المروحي الفاخر" },
 ];
 
 export const VIDEOS = [
@@ -37,13 +39,13 @@ export const VIDEOS = [
     id: "v1",
     label: "حركة وتفصيل العباية",
     src: "/media/video-1.mp4",
-    poster: "/media/full-1.jpeg",
+    poster: "/media/look-maroon-hall.jpeg",
   },
   {
     id: "v2",
     label: "قرب الخامة والكسرات المروحية",
     src: "/media/video-4.mp4",
-    poster: "/media/detail-2.jpeg",
+    poster: "/media/look-maroon-studio.jpeg",
   },
 ];
 
@@ -54,7 +56,7 @@ export const SOCIAL = {
 
 export const SIZE_GUIDE_VIDEO = {
   src: "/media/size-guide.mp4",
-  poster: "/media/side-1.jpeg",
+  poster: "/media/look-green.jpeg",
 };
 
 export const TAGLINE = "فخامة تُفصّل عليكِ";
